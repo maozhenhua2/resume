@@ -1,0 +1,76 @@
+$padding-spacing: 15px;
+.item-container {
+  width: 100%;
+  padding-right: $padding-spacing;
+  padding-left: $padding-spacing;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.item-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$padding-spacing;
+  margin-left: -$padding-spacing;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  .item,
+  [class*="item-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.item {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.item-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+%items {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: $padding-spacing;
+  padding-right: $padding-spacing;
+}
+
+@for $i from 1 through 12 {
+  .item-#{$i} {
+    @extend %items;
+  }
+}
+
+@mixin eachItem($key, $attr) {
+  @for $i from 1 through 12 {
+    .#{$key}-#{$i} {
+      @if $key==item {
+        flex: 0 0 100% / 12 * $i;
+        max-width: 100% / 12 * $i;
+      }
+      @else if $key==offset {
+        margin-left: 100% / 12 * $i;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  // 等比例缩放
+  .item-sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  @include eachItem(item, width);
+  @include eachItem(offset, margin-left);
+}
