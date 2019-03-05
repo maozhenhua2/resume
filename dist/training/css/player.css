@@ -1,0 +1,374 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 0;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+#processBox, #playBtnBox {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.icon-car, .icon-hook {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-car, .icon-hook {
+  width: 20px;
+  min-height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-car {
+  background-image: url("../images/car.png");
+}
+
+.icon-hook {
+  background-image: url("../images/hook2.png");
+}
+
+body {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#wrapper {
+  position: relative;
+  padding-top: 0.1px;
+  margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  background-image: url("../images/playerbg.jpg");
+  background-position: top center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+#playCover {
+  margin: 10% auto 10px;
+  width: 85%;
+  max-width: 350px;
+  max-height: 350px;
+  padding-top: 0.1px;
+  position: relative;
+  overflow: hidden;
+}
+#playCover:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+#playCover:before {
+  content: '';
+  display: block;
+  position: fixed;
+  width: 20%;
+  max-width: 105px;
+  height: 0;
+  padding-bottom: 28.6%;
+  left: 48%;
+  top: 0;
+  z-index: 6;
+  background-image: url("../images/needle-plus.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  -moz-transform: rotate(-34deg);
+  -ms-transform: rotate(-34deg);
+  -webkit-transform: rotate(-34deg);
+  transform: rotate(-34deg);
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -moz-transition: -moz-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+#playCover.play:before {
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#playCover .img {
+  background-image: url(./images/pic4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  margin: 10%;
+  -moz-border-radius: 999px;
+  -webkit-border-radius: 999px;
+  border-radius: 999px;
+}
+#playCover > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#playCover > div.play {
+  -moz-animation: rotates 15s linear infinite;
+  -webkit-animation: rotates 15s linear infinite;
+  animation: rotates 15s linear infinite;
+}
+#playCover > div:before, #playCover > div:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+#playCover > div:before {
+  background-image: url("../images/disc-plus.png");
+}
+#playCover > div:after {
+  background-image: url("../images/disc_light.png");
+}
+
+@-moz-keyframes rotates {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotates {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotates {
+  0% {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#playTitle {
+  margin: 1% auto 10%;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+#processBox {
+  width: 90%;
+  margin: 0 auto;
+}
+#processBox span {
+  width: 5rem;
+  color: #888;
+  text-align: center;
+}
+#processBox a {
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  -moz-border-radius: 14px;
+  -webkit-border-radius: 14px;
+  border-radius: 14px;
+  background-color: #d92027;
+  border: 3px solid #f4cfd0;
+  left: 0;
+  top: 8.5px;
+  z-index: 5;
+}
+#processBox a:before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  background-color: transparent;
+  z-index: 1;
+}
+#processBox a.active {
+  width: 30px;
+  height: 30px;
+  top: 0px;
+}
+#processBox a.active:before {
+  top: 0;
+}
+
+#processBar {
+  position: relative;
+  width: 66%;
+  height: 30px;
+}
+#processBar > div {
+  position: relative;
+  background-color: transparent;
+  height: 30px;
+}
+#processBar .processbg {
+  background-color: #ccc;
+  -moz-border-radius: 77px;
+  -webkit-border-radius: 77px;
+  border-radius: 77px;
+  height: 7px;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 11.5px;
+  z-index: 2;
+}
+#processBar .process {
+  width: 0%;
+  height: 7px;
+  -moz-border-radius: 77px;
+  -webkit-border-radius: 77px;
+  border-radius: 77px;
+  position: absolute;
+  background-color: #d92027;
+  left: 0;
+  top: 11.5px;
+  z-index: 3;
+}
+
+#playBtnBox {
+  text-align: center;
+  width: 75%;
+  margin: 10% auto;
+}
+
+#play,
+#next,
+#prev {
+  width: 33%;
+  height: 0;
+  padding-bottom: 33%;
+  -moz-border-radius: 66rem;
+  -webkit-border-radius: 66rem;
+  border-radius: 66rem;
+  background-position: center center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+
+#prev {
+  background-image: url("../images/prev.png");
+  visibility: hidden;
+}
+
+#next {
+  background-image: url("../images/next.png");
+  visibility: hidden;
+}
+
+#play {
+  background-color: #fff;
+  background-image: url("../images/play.png");
+  background-size: 27%;
+}
+#play.active {
+  background-image: url("../images/pause.png");
+}
+
+@media screen and (min-height: 568px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+/*# sourceMappingURL=player.css.map */

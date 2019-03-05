@@ -1,0 +1,247 @@
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body, ul, li, #cars td p, #intro h1, #intro p {
+  padding: 0;
+  margin: 0;
+}
+
+.header img, .header h1, #time, #date, .sales .time-cell, #intro img, #intro p, #intro div, .flip-clock-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.float-right {
+  float: right;
+}
+
+body {
+  font-family: "microsoft yahei";
+  font-size: 12px;
+  background-color: #909090;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1 {
+  margin: 0;
+}
+
+.time-cell {
+  font-family: "STENCIL STD";
+  padding: 10px 2px 0px;
+}
+
+#wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#wrapper > table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+  border: 0px solid #fff;
+  overflow: hidden;
+}
+#wrapper td {
+  border: 0px solid #fff;
+  text-align: center;
+}
+
+.header {
+  padding: 30px 45px 10px;
+  text-align: left;
+}
+.header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+.header img {
+  margin-right: 20px;
+}
+
+.v-top {
+  vertical-align: top;
+}
+
+#time .time-cell {
+  padding-top: 7px;
+}
+
+.sales {
+  margin: 0;
+  font-size: 30px;
+  color: #fff;
+  padding-left: 50px;
+  position: relative;
+  z-index: 8;
+}
+.sales .time-cell {
+  font-size: 38px;
+  border: 2px solid #c00000;
+  background-color: #fff;
+  color: #000;
+  margin: 0 1px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 70px;
+  z-index: 4;
+}
+
+#cars {
+  border: 0 solid transparent;
+  padding: 0;
+}
+#cars caption {
+  color: #fff;
+  text-align: center;
+}
+#cars caption h1 {
+  font-size: 17px;
+  margin: 20px 0 10px;
+}
+#cars td {
+  border: 0 solid transparent;
+}
+#cars img {
+  width: 100%;
+  display: block;
+}
+#cars td {
+  position: relative;
+  padding: 5px 20px;
+}
+#cars td > div {
+  display: inline-block;
+  width: 70%;
+  position: relative;
+}
+#cars td img {
+  position: relative;
+  z-index: 3;
+}
+#cars td .car-bg, #cars td span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #bd504d;
+  z-index: 2;
+}
+#cars td span {
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  top: 30px;
+}
+#cars td p {
+  display: inline-block;
+  position: absolute;
+  z-index: 4;
+  font-size: 18px;
+  right: -50px;
+  top: 0;
+}
+
+#intro {
+  border-collapse: collapse;
+  border: 0 solid transparent;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+}
+#intro td {
+  border: 0 solid transparent;
+  position: relative;
+}
+#intro div {
+  width: 120px;
+}
+#intro div img {
+  width: 60%;
+}
+#intro div + p {
+  width: 200px;
+  line-height: 1.8;
+}
+#intro .line {
+  width: 75%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #fff;
+  position: absolute;
+  left: 12.5%;
+  bottom: 0;
+}
+#intro .intro-title {
+  font-size: 15px;
+  padding: 0 0 10px;
+}
+#intro .intro-title h1 {
+  margin-bottom: 10px;
+  font-size: 27px;
+}
+
+.flip-clock-wrapper {
+  width: auto;
+}
+
+.flip-clock-wrapper ul {
+  width: 40px;
+  height: 50px;
+}
+
+.flip-clock-wrapper ul li {
+  line-height: 50px;
+}
+
+.flip-clock-divider {
+  height: 60px;
+}
+
+.flip-clock-dot.top {
+  top: 16.66667px;
+}
+
+.flip-clock-dot.bottom {
+  bottom: 16.66667px;
+}
+
+.flip-clock-wrapper ul li a div div.inn {
+  font-size: 30px;
+}
+
+#intro .flip-clock-wrapper ul li a div {
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map */

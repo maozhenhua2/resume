@@ -1,0 +1,17 @@
+{
+  "name": "car168",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "max <1036310327@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

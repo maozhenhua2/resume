@@ -1,0 +1,18 @@
+$boxbgcolor: #f2f5f8;
+$blue1: #3b5998;
+$white: #fff;
+$red: #f00;
+
+#wrapper {
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+}
+
+.part-box {
+  background-color: $boxbgcolor;
+}
+
+.red {
+  color: $red;
+}

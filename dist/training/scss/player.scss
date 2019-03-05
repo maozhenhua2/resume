@@ -1,0 +1,246 @@
+@import "base";
+
+body {
+  background-color: #fff;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+#wrapper {
+  position: relative;
+  padding-top: 0.1px;
+  margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  background-image: url("../images/playerbg.jpg");
+  background-position: top center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+#playCover {
+  margin: 10% auto 10px;
+  width: 85%;
+  max-width: 350px;
+  max-height: 350px;
+  padding-top: 0.1px;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: fixed;
+    width: 20%;
+    max-width: 105px;
+    height: 0;
+    padding-bottom: 20*1.43%;
+    left: 48%;
+    top: 0;
+    z-index: 6;
+    background-image: url("../images/needle-plus.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    @include transform(rotate(-34deg));
+    @include transform-origin(0, 0);
+    @include transition(transform linear 0.3s);
+  }
+  &.play {
+    &:before {
+      @include transform(rotate(0deg));
+    }
+  }
+  .img {
+    background-image: url(./images/pic4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 10%;
+    @include border-radius(999px);
+  }
+  & > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    &.play {
+      @include animation(rotates 15s linear infinite);
+    }
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      max-width: 350px;
+      max-height: 350px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+    &:before {
+      background-image: url("../images/disc-plus.png");
+    }
+    &:after {
+      background-image: url("../images/disc_light.png");
+    }
+  }
+}
+
+@include keyframes(rotates) {
+  0% {
+    @include transform(rotate(0deg));
+  }
+  100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+#playTitle {
+  margin: 1% auto 10%;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+#processBox {
+  @extend %flex1;
+  width: 90%;
+  margin: 0 auto;
+  span {
+    width: 5rem;
+    color: #888;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    @include border-radius(14px);
+    background-color: #d92027;
+    border: 3px solid #f4cfd0;
+    left: 0;
+    top: 8.5px;
+    z-index: 5;
+    &:before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0px;
+      background-color: transparent;
+      z-index: 1;
+    }
+    &.active {
+      width: 30px;
+      height: 30px;
+      top: 0px;
+      &:before {
+        top: 0;
+      }
+    }
+  }
+}
+
+#processBar {
+  position: relative;
+  width: 66%;
+  height: 30px;
+  & > div {
+    position: relative;
+    background-color: transparent;
+    height: 30px;
+  }
+  .processbg {
+    background-color: #ccc;
+    @include border-radius(77px);
+    height: 7px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 11.5px;
+    z-index: 2;
+  }
+  .process {
+    width: 0%;
+    height: 7px;
+    @include border-radius(77px);
+    position: absolute;
+    background-color: #d92027;
+    left: 0;
+    top: 11.5px;
+    z-index: 3;
+  }
+}
+
+#playBtnBox {
+  @extend %flex1;
+  text-align: center;
+  width: 75%;
+  margin: 10% auto;
+}
+
+#play,
+#next,
+#prev {
+  width: 33%;
+  height: 0;
+  padding-bottom: 33%;
+  @include border-radius(66rem);
+  background-position: center center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+
+#prev {
+  background-image: url("../images/prev.png");
+  visibility: hidden;
+}
+
+#next {
+  background-image: url("../images/next.png");
+  visibility: hidden;
+}
+
+#play {
+  background-color: #fff;
+  background-image: url("../images/play.png");
+  background-size: 27%;
+  &.active {
+    //background-color: #d92027;
+    background-image: url("../images/pause.png");
+  }
+}
+
+@media screen and (min-height: 568px) {
+  body {
+    overflow: hidden;
+  }
+}

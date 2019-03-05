@@ -1,0 +1,30 @@
+.theaders-fixed {
+  width: 100%;
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+.theaders-fixed table {
+  min-width: 100%;
+  width: auto;
+}
+.theaders-fixed table th,
+.theaders-fixed table td {
+  padding: 5px 10px;
+}
+.theaders-fixed .scroll-path {
+  padding: 0;
+}
+.theaders-fixed .thead {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+.theaders-fixed .tbodys {
+  width: 100%;
+  overflow: auto;
+}
+
+/*# sourceMappingURL=theaderfixed.css.map */

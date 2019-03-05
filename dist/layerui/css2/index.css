@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* all */
+/* nav */
+/*#region Bootstrap Media Query */
+/* 超小屏幕（手机，小于 768px） */
+/* 小屏幕（平板，大于等于 768px） */
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+/* screen-xs-max */
+/* screen-sm-min & screen-sm-max */
+/* screen-md-min & screen-md-max */
+/* screen-lg-min */
+/*#endregion */
+*:after, *:before, * {
+  box-sizing: border-box;
+}
+
+* {
+  outline: none;
+}
+:root {
+  --primary: #007bff;
+  --second: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --waring: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --blue: #2a85c2;
+  --black: #333;
+  --white: #fff;
+  --lightGray: #ccc;
+  --alpha0: transparent;
+  --btnBg: #fff;
+  --btnColor: #333;
+}
+
+html {
+  font-size: 14px;
+}
+
+iframe,
+body,
+ul,
+li,
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding-top: 3rem;
+  min-height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.item-row {
+  margin-top: 10px;
+}
+
+#grid .item-row [class*=item-] > div,
+#grid2 .item-row [class*=item-] > div {
+  background-color: burlywood;
+}
+
+/*# sourceMappingURL=index.css.map */

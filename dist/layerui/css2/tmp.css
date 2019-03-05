@@ -1,0 +1,35 @@
+li:nth-child(4n - 0):not(:nth-last-child(1)),
+li:nth-child(4n - 1):not(:nth-last-child(2)),
+li:nth-child(4n - 2):not(:nth-last-child(3)),
+li:nth-child(4n - 3):not(:nth-last-child(4)) {
+  border-right: 1px solid #fff;
+}
+
+li:nth-child(4n) + :nth-last-child(3) ~ li,
+li:nth-child(4n) + :nth-last-child(2) ~ li,
+li:nth-child(4n) + :nth-last-child(1),
+li:nth-child(4n) + :nth-last-child(2),
+li:nth-child(4n) + :nth-last-child(3),
+li:nth-child(3n - 0):nth-last-child(1),
+li:nth-child(3n - 1):nth-last-child(2),
+li:nth-child(3n - 2):nth-last-child(3),
+li:nth-child(3n - 3):nth-last-child(4) {
+  border-right: 0;
+}
+
+/* 
+&:nth-child(4n-3):not(:nth-last-child(4)),
+&:nth-child(4n-2):not(:nth-last-child(3)),
+&:nth-child(4n-1):not(:nth-last-child(2)),
+&:nth-child(4n):not(:nth-last-child(1)) {
+  border-right: 1px solid #fff;
+}
+&:nth-child(4n)+:nth-last-child(3),
+&:nth-child(4n)+:nth-last-child(3)~li,
+&:nth-child(4n)+:nth-last-child(2),
+&:nth-child(4n)+:nth-last-child(2)~li,
+&:nth-child(4n)+:nth-last-child(1) {
+  border-right: 0;
+} */
+
+/*# sourceMappingURL=tmp.css.map */

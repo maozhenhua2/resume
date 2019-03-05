@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import "compass";
+@import "base";
+
+* {
+  @extend %borderBox;
+
+  &:after {
+    @extend %borderBox;
+  }
+  &:before {
+    @extend %borderBox;
+  }
+}
+.clearfix {
+  @extend %clearfix;
+}
+.float-right {
+  float: right;
+}
+$fz: 32px;
+
+body {
+  @extend %format0;
+  font-family: "microsoft yahei";
+  font-size: 12px;
+  background-color: rgb(144, 144, 144);
+}
+ul, li {
+  @extend %format0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1 {
+  margin: 0;
+}
+.time-cell {
+  font-family: "STENCIL STD";
+  padding: 10px 2px 0px;
+  // background-color: rgb(222, 235, 247);
+  // border: 2px solid rgb(46, 117, 182);
+}
+#wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  & > table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border: 0px solid #fff;
+    overflow: hidden;
+  }
+  td {
+    border: 0px solid #fff;
+    text-align: center;
+  }
+}
+.header {
+  padding: 30px 45px 10px;
+  text-align: left;
+
+  h1 {
+    font-size: $fz;
+    margin: 0;
+  }
+  img, h1 {
+    @extend %vm;
+  }
+  img {
+    margin-right: 20px;
+  }
+}
+#time, #date {
+  @extend %vm;
+}
+.v-top {
+  vertical-align: top;
+}
+#time {
+  .time-cell {
+    padding-top: 7px;
+  }
+}
+.sales {
+  margin: 0;
+  font-size: $fz - 2;
+  color: #fff;
+  padding-left: 50px;
+  position: relative;
+  z-index: 8;
+
+  .time-cell {
+    font-size: $fz + 6;
+    border: 2px solid rgb(192, 0, 0);
+    background-color: #fff;
+    color: #000;
+    @extend %vm;
+    margin: 0 1px;
+  }
+}
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 70px;
+  z-index: 4;
+}
+#cars {
+  border: 0 solid transparent;
+  padding: 0;
+
+  caption {
+    color: #fff;
+    text-align: center;
+
+    h1 {
+      font-size: $fz - 15;
+      margin: 20px 0 10px;
+    }
+  }
+  td {
+    border: 0 solid transparent;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+  td {
+    position: relative;
+    padding: 5px 20px;
+
+    & > div {
+      display: inline-block;
+      width: 70%;
+      position: relative;
+    }
+    img {
+      position: relative;
+      z-index: 3;
+    }
+    .car-bg, span {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: rgb(189, 80, 77);
+      z-index: 2;
+    }
+    span {
+      background-color: transparent;
+      text-align: center;
+      color: #fff;
+      font-size: $fz - 21;
+      top: 30px;
+    }
+    p {
+      @extend %format0;
+      display: inline-block;
+      position: absolute;
+      z-index: 4;
+      font-size: $fz - 14;
+      right: -50px;
+      top: 0;
+    }
+  }
+}
+#intro {
+  border-collapse: collapse;
+  border: 0 solid transparent;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: $fz - 14 - 1;
+  font-weight: bold;
+
+  h1, p {
+    @extend %format0;
+  }
+  td {
+    border: 0 solid transparent;
+    position: relative;
+  }
+  img, p {
+    @extend %vm;
+  }
+  div {
+    width: 120px;
+    @extend %vm;
+
+    img {
+      width: 60%;
+    }
+    & + p {
+      width: 200px;
+      line-height: 1.8;
+    }
+  }
+  .line {
+    width: 75%;
+    height: 1px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: absolute;
+    left: 12.5%;
+    bottom: 0;
+  }
+  .intro-title {
+    font-size: $fz - 16 - 1;
+    padding: 0 0 10px;
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: $fz - 4 - 1;
+    }
+  }
+}
+// 覆盖计时插件
+.flip-clock-wrapper {
+  width: auto;
+  @extend %vm;
+}
+$fzi: 30px;
+$h: 50px;
+$w: 40px;
+
+.flip-clock-wrapper ul {
+  width: $w;
+  height: $h;
+}
+.flip-clock-wrapper ul li {
+  line-height: $h;
+}
+.flip-clock-divider {
+  height: $h + 10;
+}
+.flip-clock-dot.top {
+  top: $h / 3;
+}
+.flip-clock-dot.bottom {
+  bottom: $h / 3;
+}
+.flip-clock-wrapper ul li a div div.inn {
+  font-size: $fzi;
+}
+#intro .flip-clock-wrapper ul li a div {
+  width: 100%;
+}

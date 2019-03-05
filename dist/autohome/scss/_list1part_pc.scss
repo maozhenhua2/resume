@@ -1,0 +1,274 @@
+#postPanel {
+  border-top: 3px solid $blue1;
+  margin-top: 5px;
+  &.has-fixed {
+    padding-bottom: 63px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    a {
+      color: $blue1;
+    }
+
+    span {
+      margin-left: 5px;
+      color: #666;
+    }
+  }
+}
+
+#postContent {
+  border-top: 1px solid $white;
+  padding: 10px;
+  position: relative;
+  input {
+    width: 100%;
+    height: 2.6rem;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    resize: none;
+    padding-right: 200px;
+    border: 1px solid #ccc;
+    @include box-shadow(1px 1px 5px 1px #ebebeb inset);
+  }
+  p {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1;
+    padding: 14px 20px;
+    color: #999;
+    &.show {
+      display: block;
+    }
+  }
+}
+
+#postBtns {
+  padding: 10px;
+  margin-top: 10px;
+  &.fixed {
+    background-color: $listpartbg;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    max-width: 1000px;
+    z-index: 4;
+  }
+  button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    @extend %vm;
+    i,
+    span {
+      @extend %vm;
+    }
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  div {
+    &:nth-child(1) {
+      float: left;
+    }
+    &:nth-child(2) {
+      float: right;
+    }
+  }
+
+  #postbtn {
+    @extend %btn-blue;
+    padding: 7px 15px;
+    margin-left: 10px;
+  }
+}
+
+#list {
+  li {
+    position: relative;
+    margin: 10px 0;
+    &.focus {
+      .part-box {
+        background-color: $listpartfocusbg;
+        //@include animation(flash 1s 1);
+        textarea {
+          border: 1px solid $listpartfocusbg;
+        }
+      }
+    }
+    &.choosen {
+      .drag-handle {
+        color: #fff;
+      }
+      .part-box {
+        background-color: $blue1;
+      }
+    }
+  }
+  .part-box {
+    position: relative;
+    padding: 35px 10px 10px;
+    transition: background-color 0.5s linear;
+  }
+  textarea {
+    width: 100%;
+    height: 5rem;
+  }
+  .remove-part {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px 10px;
+    z-index: 3;
+  }
+  .has-img {
+    @include display-flex(flex);
+    @include flex-flow(row nowrap);
+    @include justify-content(space-around);
+    @include align-items(stretch);
+    .img {
+      width: 35%;
+      text-align: center;
+      background-color: $white;
+      margin-right: 20px;
+      padding: 5%;
+      border: 1px solid #ccc;
+    }
+    img {
+      @extend %vm;
+      max-width: 90%;
+      max-height: 90%;
+    }
+    textarea {
+      height: auto;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+  }
+}
+
+.drag-handle {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  cursor: move;
+  color: #999;
+  &:before {
+    content: attr(data-handle)
+  }
+  &:hover {
+    //color: $white;
+    //background-color: $blue1;
+    &:before {
+      content: attr(data-handle2);
+    }
+  }
+}
+
+#publish {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+#publisbtn {
+  @extend %btn-blue;
+  padding: 5px 10px;
+}
+
+#imgfile {
+  display: none;
+}
+
+#facesBox {
+  display: none;
+}
+
+.face-box {
+  $size: 10px;
+  $size2: $size + 4px;
+  display: inline-block;
+  //padding: 10px;
+  position: relative;
+  margin-top: $size2;
+  background-color: #f6f6f6;
+  @include box-shadow(0px 1px 1px 1px rgba(0, 0, 0, .3));
+  border: 2px solid #ccc;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: -$size;
+    left: $size;
+    border: {
+      left: $size * 2 / 3 solid transparent;
+      right: $size * 2 / 3 solid transparent;
+      top: 0 solid transparent;
+      bottom: $size solid #f6f6f6;
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: -$size2;
+    left: $size - ($size2 - $size) / 2 - 1;
+    border: {
+      left: $size2 * 2 / 3 solid transparent;
+      right: $size2 * 2 / 3 solid transparent;
+      top: 0 solid transparent;
+      bottom: $size2 solid #ccc;
+    }
+  }
+  button {
+    padding: 0;
+    margin: 5px;
+    background-color: #f6f6f6;
+    border: 1px solid #f6f6f6;
+  }
+}
+
+.layui-layer.faces-layer {
+  background-color: transparent;
+  min-width: 555px;
+  box-shadow: none;
+}
+
+.layui-layer-setwin .layui-layer-close2 {
+  top: -20px;
+  right: -20px;
+}
+
+
+@include keyframes(flash) {
+  0% {
+    background-color: $listpartfocusbg;
+  }
+
+  25% {
+    background-color: $listpartflashbg;
+  }
+
+  50% {
+    background-color: $listpartfocusbg;
+  }
+
+  75% {
+    background-color: $listpartflashbg;
+  }
+
+  100% {
+    background-color: $listpartfocusbg;
+  }
+}

@@ -1,0 +1,365 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 0;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+#headerName + div, #process {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.icon-car, .icon-hook, .tabBox a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-car, .icon-hook {
+  width: 20px;
+  min-height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-car {
+  background-image: url("../images/car.png");
+}
+
+.icon-hook {
+  background-image: url("../images/hook2.png");
+}
+
+#wrapper {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#header {
+  position: relative;
+}
+
+#headBg {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+#headerContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
+  padding: 10px;
+  overflow: hidden;
+  color: #fff;
+}
+#headerContent > div {
+  position: relative;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#headerContent p {
+  line-height: 1.6;
+}
+#headerContent span {
+  font-size: 0.9rem;
+  display: block;
+}
+#headerContent a {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#headerName {
+  font-size: 1.3rem;
+  float: left;
+  margin-bottom: 8px;
+  width: 78%;
+  padding-left: 10px;
+}
+#headerName + div {
+  width: 78%;
+  padding-left: 10px;
+  float: left;
+}
+
+#headImg {
+  display: block;
+  float: left;
+  width: 22%;
+  overflow: hidden;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#headImg:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+#headerTxt {
+  float: left;
+  width: 78%;
+  padding-left: 10px;
+}
+
+.tabBox {
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.tabBox a {
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 1px solid transparent;
+}
+.tabBox a.active {
+  color: #d92027;
+  border-bottom: 1px solid #d92027;
+}
+
+#pathbg img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+#pathbg li {
+  position: relative;
+}
+#pathbg li > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+#pathbg .car-right,
+#pathbg .car-left {
+  width: 35%;
+  position: absolute;
+  left: 38%;
+  top: 21%;
+  z-index: 7;
+}
+#pathbg .car-right {
+  left: 30%;
+}
+#pathbg .car-gray {
+  position: relative;
+}
+#pathbg .car-gray:before {
+  position: absolute;
+  content: attr(title);
+  display: block;
+  color: #888;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  top: -35%;
+}
+#pathbg .car-gray a {
+  position: absolute;
+  left: 22.5%;
+  top: 0;
+  z-index: 8;
+  width: 55%;
+  color: #fff;
+  background-color: rgba(217, 32, 39, 0.5);
+  font-size: 1rem;
+  text-align: center;
+  margin: auto;
+  border-radius: 100%;
+}
+#pathbg .car-gray a:after {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+#pathbg .car-gray a span {
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#pathbg .oil-icon,
+#pathbg .build-icon,
+#pathbg .fix-icon {
+  position: absolute;
+  z-index: 8;
+}
+#pathbg .oil-icon:before,
+#pathbg .build-icon:before,
+#pathbg .fix-icon:before {
+  content: attr(title);
+  position: absolute;
+  z-index: 8;
+  display: block;
+  color: #d92027;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+#pathbg .oil-icon {
+  width: 13%;
+  left: 23%;
+  top: 63%;
+}
+#pathbg .oil-icon:before {
+  left: 100%;
+  top: 51%;
+}
+#pathbg .build-icon {
+  left: auto;
+  right: 28%;
+  width: 18%;
+  top: 70%;
+}
+#pathbg .build-icon:before {
+  left: -95%;
+  top: 33%;
+}
+#pathbg .fix-icon {
+  width: 27%;
+  top: 65%;
+  left: 26%;
+}
+#pathbg .fix-icon:before {
+  left: 95%;
+  top: 51%;
+}
+
+#process {
+  font-size: 1rem;
+  white-space: nowrap;
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  margin: 15px;
+}
+#process > span {
+  color: #333;
+}
+#process > div {
+  display: inline-block;
+  width: 70%;
+  position: relative;
+}
+#process > div p {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -moz-border-radius: 99px;
+  -webkit-border-radius: 99px;
+  border-radius: 99px;
+}
+#process > div p:nth-child(1) {
+  width: 100%;
+  background-color: #e6e7e8;
+  z-index: 1;
+}
+#process > div p:nth-child(2) {
+  background-color: #d92027;
+  z-index: 2;
+}
+#process > div span {
+  position: absolute;
+  height: 100%;
+  z-index: 3;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=learning_path.css.map */

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+#scroller {
+  width: 100%;
+  height: 300px;
+  margin: 10px 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: auto;
+  background-color: #fff;
+}
+
+.list {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.list ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list li {
+  width: calc(50% - 0.4rem);
+  height: 0;
+  padding-bottom: calc(50% - 0.8rem);
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+.list li > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.list li > div:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  content: "未学习";
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.7rem 0.5rem 0.5rem;
+  color: #fff;
+  font-size: 0.8rem;
+  background-color: #c09c47;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.list li > div:after {
+  content: attr(data-progress);
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+  font-size: 0.8rem;
+  border-radius: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  color: #fff;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, rgba(125, 185, 232, 0) 100%);
+}
+.list li .complete:before {
+  content: "已学习";
+  background-color: #2fb270;
+}
+.img {
+  height: 60%;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.img:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  z-index: 1;
+}
+.img:before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  z-index: 2;
+}
+
+.text {
+  padding: 0.8rem;
+  height: 40%;
+  background-color: #fff;
+}
+
+.time {
+  color: #aab5c5;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+.time span {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  transform: scale(0.9);
+  transform-origin: 0 50%;
+}
+.time .icon-star {
+  flex-shrink: 0;
+}
+
+.update,
+.more {
+  text-align: center;
+  color: #adadad;
+  padding: 0.8rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.update span,
+.more span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.update {
+  bottom: inherit;
+  top: 0;
+}
+
+/*# sourceMappingURL=refresh.css.map */

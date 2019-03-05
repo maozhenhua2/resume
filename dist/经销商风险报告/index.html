@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="renderer" content="webkit"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>业绩驱动营风险评估报告模版1121</title>
+  <link href="style/DealerRiskReport.css" rel="stylesheet"/>
+  <style>
+    .loading {
+      background-image: url('images/loading.gif');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 50px;
+    }
+
+    .char:before {
+      display: none;
+    }
+
+    .point.level1{
+      background-color: green;
+    }
+    .point.level2{
+      background-color: blue;
+    }
+    .point.level3{
+      background-color: yellow;
+    }
+    .point.level4{
+      background-color: red;
+    }
+
+    .table-info-left p {
+      width: 65%;
+    }
+
+    .table-info-left div p:first-child {
+      width: 35%;
+    }
+  </style>
+</head>
+
+<body>
+<!-- page1 -->
+<div class="page">
+  <div class="header"></div>
+  <div class="content">
+    <div class="cover">
+      <div class="title-border top-title">
+        <div></div>
+      </div>
+      <p class="title-h1">尊敬的广汽本田特约店负责人：</p>
+      <p>
+        非常感谢您参与广汽本田特约店业绩驱动营！业绩驱动营项目是由广汽本田网络运营部发起的针对特约店盈利能力提升的项目。通过帮助特约店实时分析经营数据，评价特约店经营业绩情况和经营风险预警，最终实现全网特约店盈利能力的提升。
+        再次感谢您的参与！
+      </p>
+      <div class="title-border bottom-title">
+        <div></div>
+      </div>
+    </div>
+
+    <div class="category" style="margin-top: 64px;">报告导读</div>
+
+    <div class="cover-content">
+      以下是根据您提供的季度经营数据，依据特约店经营风险评估体系所生成的“广汽本田特约店单店经营风险评估报告”(以下简称“单店风险评估报告”)。单店风险评估报告从A类和B类风险，四个维度，25个关键指标分析了您公司的综合经营风险，通过评估得分，并给出全国平均值来进行横向对比评价。通过流动比率、资产负债率、利息保障倍数、产权比率、总资产回报率、应收账款周转次数来分析企业财务状况从而评估特约店流动风险；通过净利润增长率、新车、零部件周转次数、总费用占总毛利比、库销比来看企业管控能力，评估企业管理风险；通过毛利贡献率、主营收入增长率、经营净利率、零服吸收率来评估运营风险；从新车、零部件开票完成率、核心岗位流失率来评估特约店运营管理行为；通过月新增潜在客户、新增成交客户以及客户流失率来评估特约店客户管理行为；通过应收账款异常、新车、零部件库龄占比来评估企业财务信用行为。
+    </div>
+
+    <div class="category" style="margin-top: 40px;">阅读指南</div>
+
+    <div class="covet-table">
+      <img src="images/covertablebg.svg" alt="">
+      <table>
+        <thead>
+        <tr>
+          <th>报告涉及的名词</th>
+          <th>解释</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td style="width: 50%;">全国平均值</td>
+          <td>依据广汽本田全国特约店季度平均数据评估各项指标得分</td>
+        </tr>
+        <tr>
+          <td>单店值</td>
+          <td>依据特约店季度平均数据评估各项指标得分</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- page2 -->
+<div class="page">
+  <div class="header"></div>
+  <div class="content">
+    <div class="category" style="margin-top: 30px;">特约店综合信息</div>
+
+    <div class="page2-info">
+      <table class="page2-info-table" style="margin-right: 5px;">
+        <thead>
+        <tr class="table-title">
+          <th class="page2-info-left-table">特约店基本信息</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="page2-info-style1">
+          <td class="page2-info-height table-info-left">
+            <div>
+              <p>特约店代码</p>
+              <p id="DealerCode"></p>
+            </div>
+            <div>
+              <p>特约店名称</p>
+              <p id="DealerName"></p>
+            </div>
+            <div>
+              <p>区域/规模</p>
+              <p id="AreaName"></p>
+            </div>
+            <div>
+              <p>成立时间</p>
+              <p id="OpenTime"></p>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table class="page2-info-table">
+        <thead>
+        <tr class="table-title">
+          <th class="page2-info-right-table">特约店综合评估结果</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="page2-info-style1">
+          <td class="bgColor2 page2-info-height table-info-right">
+            <h1>本店评估结果</h1>
+            <div class="light-score">
+              <span class="bgGreen">A</span>
+              <span class="bgBlue">B</span>
+              <span class="bgOrange">C</span>
+              <span class="bgRed">D</span>
+            </div>
+            <h1>全国平均结果</h1>
+            <div class="light-score">
+              <span class="bgGreen">A</span>
+              <span class="bgBlue">B</span>
+              <span class="bgOrange">C</span>
+              <span class="bgRed">D</span>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="assess">
+      <table>
+        <thead>
+        <tr class="table-title">
+          <th>A类风险评估</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <div class="echart-div"></div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+        <tr class="table-title">
+          <th>B类风险评估</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>
+            <div class="echart-div"></div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="category" style="margin-top: 30px;">A类四维度指标评估：</div>
+
+    <div class="has-char-table">
+      <div class="table-title top">流动风险评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">流动风险</td>
+          <td class="right">
+            <div class="table-char-title">流动风险评估特约店财务管理能力，财务状况稳健性的重要表现。</div>
+            <div>
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">1</span><span>流动比率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>流动资产合计/流动负债合计</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">2</span><span>资产负债率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>总负债/总资产</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">3</span><span>利息保障倍数</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>（利润总额+财务费用）/利息费用</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">4</span><span>产权比率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>总负债/所有者权益</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- page3 -->
+<div class="page">
+  <div class="header"></div>
+  <div class="content">
+    <div class="category" style="margin-top: 30px;">A类四维度指标评估：</div>
+
+    <div class="has-char-table">
+      <div class="table-title top">流动风险评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">流动风险</td>
+          <td class="right">
+            <div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">5</span><span>总资产回报率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>净利润/总资产</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="has-char-table" style="margin-top: 5px;">
+      <div class="table-title top">管理风险评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">管理风险</td>
+          <td class="right">
+            <div class="table-char-title">理风险评估特约店增长潜力和长期发展趋势、管理机制是否合理的重要表现。</div>
+            <div>
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">6</span><span>应收账款年周转次数</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>营业收入/（应收帐款余额年初数+应收帐款余额年末数）/2</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">7</span><span>净利润增长率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>本期净利润/上期净利润-1*100%</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">8</span><span>新车库存周转次数（年）</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>(当期新车销售成本/((期初新车库存金额+期末新车库存金额)/2)）*100%</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">9</span><span>零部件库存周转次数（年）</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>(当期零部件销售成本/((期初零部件库存金额+期末零部件库存金额)/2)）*100%</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">10</span><span>总费用占总毛利比</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>总费用/总毛利*100%</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">11</span><span>库销比例</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>期末存货量/当期月均销量</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- page4 -->
+<div class="page">
+  <div class="header"></div>
+  <div class="content">
+
+    <div class="category" style="margin-top: 30px;">A类四维度指标评估：</div>
+
+    <div class="has-char-table">
+      <div class="table-title top">运营风险评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">运营风险</td>
+          <td class="right">
+            <div class="table-char-title">运营风险是评估特约店业务线获取利润以及价值增值的能力重要表现。</div>
+            <div>
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">12</span><span>售后及水平事业毛利贡献率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>(售后毛利+水平事业毛利)/总收入</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">13</span><span>主营业务收入增长率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>本期主营业务收入/上期主营业务-1*100%</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">14</span><span>经营净利率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>净利润/主营业务收入*100%</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">15</span><span>零服吸收率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>售后维修业务毛利/(总费用-新车销售业务变动费用)</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="category" style="margin-top: 25px;">B类四维度指标评估：</div>
+
+    <div class="has-char-table">
+      <div class="table-title top">运营管理行为评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">运营管理行为</td>
+          <td class="right">
+            <div class="table-char-title">运营管理行为是特约店运营指导水平和管理水平的重要体现。</div>
+            <div>
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">1</span><span>新车开票完成率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>新车实际开票数/新车目标开票数</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">2</span><span>零部件开票完成率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>零部件实际开票金额/零部件目标开票金额</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">3</span><span>新车交付目标完成率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>新车交付完成数量/新车交付目标数量</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">4</span><span>核心岗位流失率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>（销售顾问离职人数+服务顾问离职人数+管理岗位离职人数)/(销售顾问人数+服务顾问人数+管理岗位人数</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- page5 -->
+<div class="page">
+  <div class="header"></div>
+  <div class="content">
+
+    <div class="category" style="margin-top: 30px;">B类四维度指标评估：</div>
+
+    <div class="has-char-table">
+      <div class="table-title top">客户管理行为评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">运营管理行为</td>
+          <td class="right">
+            <div class="table-char-title">客户管理行为评估特约店人员综合能力，客户邀约、维系能力重要表现。</div>
+            <div>
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">5</span><span>月新增潜在客户</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>首次进店客户</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">6</span><span>月新增成交客户</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>当期成交客户</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">7</span><span>客户流失率</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>(保有客户数量-1年内进厂有效客户数量)/保有客户数量</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="has-char-table" style="margin-top: 5px;">
+      <div class="table-title top">财务信用评估结果</div>
+      <table>
+        <tbody>
+        <tr>
+          <td class="table-title left">财务信用行为</td>
+          <td class="right">
+            <div class="table-char-title">财务信用行为评估企业管理行为、信用风险重要表现。</div>
+            <div>
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">8</span><span>应收账款异常</span>
+                    <span class="point"></span>
+                  </p>
+                  <p></p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">9</span><span>新车库龄占比</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>新车库存天数</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+              <div class="chart-box">
+                <div class="char-title">
+                  <p>
+                    <span class="number">10</span><span>零部件库龄占比</span>
+                    <span class="point"></span>
+                  </p>
+                  <p>零部件库存天数</p>
+                </div>
+                <div class="char"></div>
+              </div>
+
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="data/GetDealerRiskInfo.js"></script>
+<script src="data/GetDealerRiskReportTotalPoint.js"></script>
+<script src="data/GetDealerRiskReportBarGraph.js"></script>
+<script src="data/GetDealerRiskReportRadar.js"></script>
+
+<script src="vendor/jquery-2.1.1.min.js"></script>
+<script src="vendor/echart/echarts.js"></script>
+<script src="js/FPEChartspdf.js"></script>
+<script src="js/DealerRiskReport.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,521 @@
+@charset "UTF-8";
+@import "compass";
+
+html {
+  font-size: 12px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+h1 {
+  margin: 0;
+}
+
+ul,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 0;
+}
+
+textarea,
+input,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+%flex1 {
+  @include display-flex(flex);
+  @include flex-flow(row nowrap);
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+%vm {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+%icon {
+  @extend %vm;
+  width: 20px;
+  min-height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+%icon-arrow-left {
+  background-image: url("../images/left-arrow.svg");
+}
+
+%icon-arrow-down {
+  background-image: url("../images/arrow-down.svg");
+}
+
+%icon-arrow-down-red {
+  background-image: url("../images/arrow-down-red.svg");
+}
+
+%icon-arrow-up {
+  background-image: url("../images/arrow-up.svg");
+}
+
+%icon-arrow-up-down {
+  background-image: url("../images/arrow-up-down.svg");
+}
+
+%icon-arrow-up-down-up-active {
+  background-image: url("../images/arrow-up-down-up-active.svg");
+}
+
+%icon-arrow-up-down-down-active {
+  background-image: url("../images/arrow-up-down-down-active.svg");
+}
+
+%icon-filter {
+  background-image: url("../images/filter.svg");
+}
+
+%icon-checked {
+  background-image: url("../images/checked.svg");
+}
+
+%icon-clear {
+  background-image: url("../images/close.svg");
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.icon-back {
+  @extend %icon;
+  @extend %icon-arrow-left;
+}
+
+.icon-arrow-down {
+  @extend %icon;
+  @extend %icon-arrow-down;
+}
+
+.icon-arrow-down-red {
+  @extend %icon;
+  @extend %icon-arrow-down-red;
+}
+
+.icon-arrow-up {
+  @extend %icon;
+  @extend %icon-arrow-up;
+}
+
+.icon-arrow-up-down {
+  @extend %icon;
+  @extend %icon-arrow-up-down;
+}
+
+.icon-arrow-up-down-up-active {
+  @extend %icon;
+  @extend %icon-arrow-up-down-up-active;
+}
+
+.icon-arrow-up-down-down-active {
+  @extend %icon;
+  @extend %icon-arrow-up-down-down-active;
+}
+
+.icon-filter {
+  @extend %icon;
+  @extend %icon-filter;
+}
+
+.icon-checked {
+  @extend %icon;
+  @extend %icon-checked;
+}
+
+.icon-clear {
+  @extend %icon;
+  @extend %icon-clear;
+}
+
+///////////////////////////////
+#wrapper {
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+#search {
+  @extend %flex1;
+  @include background-image(linear-gradient(to top, #efefef, #fff));
+  padding: 10px;
+  a,
+  input {
+    @extend %vm;
+  }
+
+  & > div {
+    width: 100%;
+    position: relative;
+    a {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      height: 100%;
+      text-align: center;
+      background-image: url(../images/close.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 50%;
+      background-color: transparent;
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  a {
+    width: 30px;
+    &:nth-child(1) {
+      font-size: 0;
+    }
+    &:nth-child(3) {
+      width: 46px;
+      text-align: right;
+      font-size: 1.2rem;
+      color: #888;
+    }
+  }
+
+  input {
+    padding: 5px 30px 5px 7%;
+    @include border-radius(100px);
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    background-image: url("../images/search.svg");
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: 5px;
+  }
+}
+
+.filter {
+  background-color: #fff;
+  @extend %flex1;
+  @include align-items(stretch);
+  div {
+    width: 25%;
+    padding: 5px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+  }
+  button {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    span {
+      @extend %vm;
+      margin-right: 5px;
+    }
+    i {
+      @extend %vm;
+      width: 9px;
+      min-height: 10px;
+    }
+  }
+}
+
+#filter1 {
+  button {
+    &.focus {
+      color: #f00;
+    }
+  }
+}
+
+#header {
+  &.has-fixed {
+    margin-bottom: 40px;
+  }
+  &.ab {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+#filter2 {
+  min-height: 27px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+
+  @include display-flex(flex);
+  @include flex-flow(row wrap);
+  @include justify-content(flex-start);
+  @include align-items(center);
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  a {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #efefef;
+    background-color: #efefef;
+    @include border-radius(3px);
+    margin: 3px;
+  }
+}
+
+#mask {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  &.show {
+    display: block;
+  }
+}
+
+#allBox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding: 10px 0;
+  &.show {
+    display: block;
+  }
+  li {
+    padding: 5px 30px 5px 15px;
+    position: relative;
+    &.active {
+      a {
+        color: #f00;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 30px;
+        height: 100%;
+        background-image: url(../images/checked.svg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;
+      }
+    }
+  }
+  a {
+    font-size: 1rem;
+  }
+}
+
+#filterBox {
+  background-color: #fff;
+  @include transition(right 0.3s linear);
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  //padding-bottom: 41px;
+  right: -90%;
+  top: 0;
+  z-index: 2;
+  & > div {
+    &:first-child {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 41px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  &.show {
+    right: 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+    font-weight: normal;
+  }
+}
+
+#filterBoxBtn {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  @extend %flex1;
+  button {
+    width: 50%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 10px 5px;
+    font-size: 1.2rem;
+    &:nth-child(2) {
+      background-color: #f00;
+      color: #fff;
+    }
+  }
+}
+
+.filter-btns {
+
+  @include display-flex(flex);
+  @include justify-content(space-around);
+  @include flex-flow(row wrap);
+  @include align-items(center);
+  padding: 5px;
+  button {
+    width: 30%;
+    margin: 5px;
+    padding: 5px;
+    @include border-radius(3px);
+    border: 1px solid transparent;
+    background-color: #efefef;
+    &.focus {
+      background-color: #fff;
+      border: 1px solid #f00;
+      color: #f00;
+      background-image: url("../images/checked.svg");
+      background-position: 25px center;
+      background-size: 10px;
+      background-repeat: no-repeat;
+      text-indent: 35px;
+      text-align: left;
+    }
+  }
+  input {
+    width: 45%;
+    border: 1px solid #ccc;
+    @include border-radius(3px);
+    background-color: #efefef;
+    padding: 5px;
+    text-align: center;
+    @extend %vm;
+  }
+  span {
+    @extend %vm;
+  }
+}
+
+#main {
+  li {
+    a {
+      padding: 5px 20px 5px 5px;
+      @extend %flex1;
+      @include align-items(flex-start);
+    }
+    img {
+      width: 40%;
+    }
+    div {
+      width: 55%;
+      font-size: 1rem;
+      padding: 10px 0;
+
+      @include display-flex(flex);
+      @include flex-flow(column nowrap);
+      @include justify-content(space-between);
+      @include align-items(stretch);
+
+      p {
+        flex-grow: 1;
+        font-size: 1.3rem;
+        &:nth-child(1) {
+          display: -webkit-box;
+          width: 100%;
+          height: 3.25rem;
+          overflow: hidden;
+          word-break: break-word;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        &:nth-child(2) {
+          min-height: 2rem;
+        }
+        &:nth-child(3) {
+          color: #f00;
+          margin-bottom: 5px;
+          span {
+            &:nth-child(1) {
+              font-size: 1rem;
+            }
+          }
+        }
+        &:nth-child(4) {
+          color: #aaa;
+          span {
+            &:nth-child(1) {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

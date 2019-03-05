@@ -1,0 +1,284 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  margin: 0;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+.flex1, #trainIntro li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.icon-car, .icon-hook, .list-head, .list-main, .checkbox, .checkbox input[type="checkbox"]:before, .checkbox input[type="checkbox"]:after, #signUp button span, .tabBox a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon-car, .icon-hook {
+  width: 20px;
+  min-height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-car {
+  background-image: url("../images/car.png");
+}
+
+.icon-hook {
+  background-image: url("../images/hook2.png");
+}
+
+body {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+#wrapper {
+  position: relative;
+  max-width: 640px;
+  min-height: 100%;
+  padding-bottom: 45px;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+#header {
+  padding: 10px;
+  padding-bottom: 20px;
+  border-bottom: 10px solid #f5f5f5;
+}
+
+#trainTitle {
+  text-align: center;
+}
+#trainTitle h5 {
+  color: #3d3e44;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+#trainTitle p {
+  color: #6d6f76;
+  font-size: 0.6rem;
+  white-space: nowrap;
+  width: 50%;
+}
+
+#trainIntro {
+  border-top: 1px dashed #b2b2b2;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+#trainIntro ul {
+  border: 1px solid #f5f5f5;
+}
+#trainIntro li {
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: #333;
+}
+#trainIntro li:nth-child(2n - 1) {
+  background-color: #f5f5f5;
+}
+#trainIntro li span:nth-child(1) {
+  font-weight: bold;
+  width: 45%;
+  white-space: nowrap;
+}
+#trainIntro li span:nth-child(2) {
+  width: 80%;
+}
+
+.list li {
+  padding: 5px 10px;
+}
+.list li:nth-child(1) > div {
+  border-top: 0px;
+}
+.list li:nth-last-child(1) > div {
+  border-bottom: 1px solid #ccc;
+}
+.list li > div {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.list-head {
+  -moz-border-radius: 999px;
+  -webkit-border-radius: 999px;
+  border-radius: 999px;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #ccc;
+  margin: 0px 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.list-main {
+  font-size: 1rem;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+}
+.checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+.checkbox input[type="checkbox"]:before {
+  visibility: visible;
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #b8b8b8;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+.checkbox input[type="checkbox"]:after {
+  content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  background-image: url("../images/hook.png");
+  background-position: center center;
+  background-size: 65%;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+.checkbox input[type="checkbox"]:checked:before {
+  border: 1px solid #d92027;
+  background-color: #d92027;
+}
+.checkbox input[type="checkbox"]:checked:after {
+  visibility: visible;
+}
+
+#signUp {
+  padding: 7px;
+  margin-bottom: 5px;
+}
+#signUp button {
+  width: 100%;
+  background-color: #e1e1e1;
+  border: 1px solid transparent;
+  color: #666;
+  padding: 10px;
+  font-size: 1rem;
+  min-height: 45px;
+}
+#signUp button i {
+  width: 15px;
+  height: 15px;
+  margin: 0 7px;
+}
+
+.tabBox {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.tabBox a {
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 1px solid transparent;
+}
+.tabBox a.active {
+  color: #d92027;
+  border-bottom: 1px solid #d92027;
+}
+
+#activeSubmit {
+  background-color: #d92027;
+  width: 100%;
+  padding: 10px;
+  min-height: 45px;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid transparent;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#activeSubmit .icon-car {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=personnel_registration.css.map */

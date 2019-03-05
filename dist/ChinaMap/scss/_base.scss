@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "compass";
+
+%clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    overflow: hidden;
+  }
+}
+
+%borderBox {
+  box-sizing: border-box;
+}
+
+%format0 {
+  padding: 0;
+  margin: 0;
+}
+
+%vm {
+  display: inline-block;
+  vertical-align: middle;
+}

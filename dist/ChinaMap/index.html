@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="renderer" content="webkit"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>数据看板</title>
+  <!-- <link rel="stylesheet" href="vendor/flipcountdown/jquery.flipcountdown.css"> -->
+  <link rel="stylesheet" href="vendor/flipclock/flipclock.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+  <div id="wrapper">
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="3" style="height: 100px;" class="clearfix">
+            <div class="header">
+              <img src="images/logo.png" alt="logo">
+              <h1>广汽乘用车全国网络业绩战报看板</h1>
+
+              <h1 class="float-right">
+                <span id="date"></span>
+                <span id="time"></span>
+              </h1>
+            </div>
+
+          </td>
+        </tr>
+        <tr>
+          <td class="v-top" style="width: 57%;position: relative;overflow: hidden;">
+            <h1 id="sales" class="sales">
+              <span>全国当月累积销售量（台）</span>
+              <span class="count"></span>
+            </h1>
+            <div id="map"></div>
+          </td>
+          <td class="v-top" style="width: 300px;position: relative;">
+            <table id="cars">
+              <caption>
+                <h1>车型销售目标达成率</h1>
+              </caption>
+              <tbody>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GS8.png" alt="">
+                      <div class="car-bg" style="height: 95%;"></div>
+                      <span>GS8</span>
+                      <p>95%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GS5%20SUPER.png" alt="">
+                      <div class="car-bg" style="height: 92%;"></div>
+                      <span>GS5 Super</span>
+                      <p>92%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GS5.png" alt="">
+                      <div class="car-bg" style="height: 98%;"></div>
+                      <span>GS5</span>
+                      <p>98%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GS4.png" alt="">
+                      <div class="car-bg" style="height: 90%;"></div>
+                      <span>GS4</span>
+                      <p>90%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GA8.png" alt="">
+                      <div class="car-bg" style="height: 86%;"></div>
+                      <span>GA8</span>
+                      <p>86%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GA6.png" alt="">
+                      <div class="car-bg" style="height: 65%;"></div>
+                      <span>GA6</span>
+                      <p>65%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GA5.png" alt="">
+                      <div class="car-bg" style="height: 60%;"></div>
+                      <span>GA5</span>
+                      <p>60%</p>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/GA3S.png" alt="">
+                      <div class="car-bg" style="height: 88%;"></div>
+                      <span>GA3S</span>
+                      <p>88%</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td class="v-top">
+            <table id="intro">
+              <tbody>
+                <tr>
+                  <td colspan="2" class="intro-title" >
+                    <h1>全国当日销售量（台）</h1>
+                    <p id="daySales" class="sales"></p>
+                    <br>
+                    <div class="line"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <h1 style="font-size: 24px;">全国关键指标（当月累积）</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/pic1.png" alt="">
+                    </div>
+                    <p>
+                      IDCC新增潜在客户量
+                      <br>
+                      <span>2908</span>
+                    </p>
+                    <div class="line"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/pic2.png" alt="">
+                    </div>
+                    <p>
+                      展厅新增潜在客户量
+                      <br>
+                      <span>3408</span>
+                    </p>
+                    <div class="line"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>                      
+                      <img src="images/pic3.png" alt="" style="width: 70%;">
+                    </div>
+                    <p>
+                      展厅试乘试驾率
+                      <br>
+                      <span>45%</span>
+                    </p>
+                    <div class="line"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div>
+                      <img src="images/pic4.png" alt="">
+                    </div>
+                    <p>
+                      展厅综合成交率
+                      <br>
+                      <span>21%</span>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <!-- <script src="vendor/flipcountdown/jquery.flipcountdown.js"></script> -->
+  <script src="vendor/flipclock/flipclock.min.js"></script>
+
+  <!-- 引入 ECharts 文件 -->
+  <script src="vendor/echarts/echarts.min.js"></script>
+  <script src="vendor/echarts/china.js"></script>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

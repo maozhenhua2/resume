@@ -1,0 +1,1 @@
+var GetDealerRiskReportTotalPoint = {"status":true,"dataList":[{"DealerCode":"000000","Point":53.94221},{"DealerCode":"DGD069","Point":61}]};
