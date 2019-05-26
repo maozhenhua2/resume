@@ -1,98 +1,108 @@
 <style lang="scss">
-.main-nav {
-  i {
-    display: none;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 999px;
-    background-color: #f2f2f2;
-    margin: 5px auto 15px;
-    line-height: 4.5rem;
-    color: #fff;
-    font-style: normal;
-    font-size: 2.5rem;
-    text-align: center;
-    box-shadow: 1px 1px 5px 1px rgba(206, 206, 206, 0.5);
-  }
-}
-
-.bg-red {
-  background: linear-gradient(
-    50deg,
-    rgba(248, 94, 9, 0.5) 0%,
-    rgba(248, 94, 9, 1) 100%
-  );
-}
-
-.bg-yellow {
-  background: linear-gradient(
-    50deg,
-    rgba(251, 229, 0, 0.5) 0%,
-    rgba(251, 229, 0, 1) 100%
-  );
-}
-
-.bg-green {
-  background: linear-gradient(
-    50deg,
-    rgba(0, 255, 107, 0.5) 0%,
-    rgba(0, 255, 107, 1) 100%
-  );
-}
-
-.bg-blue {
-  background: linear-gradient(
-    50deg,
-    rgba(0, 57, 255, 0.5) 0%,
-    rgba(0, 57, 255, 1) 100%
-  );
-}
-
-.bg-orange {
-  background: linear-gradient(
-    50deg,
-    rgba(255, 150, 0, 0.5) 0%,
-    rgba(255, 150, 0, 1) 100%
-  );
-}
-
-.bg-lightred {
-  background: linear-gradient(
-    50deg,
-    rgba(255, 113, 143, 0.5) 0%,
-    rgba(255, 113, 143, 1) 100%
-  );
-}
-
-.day-list {
-  a {
-    color: #fff;
-    span {
-      display: block;
+  .main-nav {
+    i {
+      display: none;
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 999px;
+      background-color: #f2f2f2;
+      margin: 5px auto 15px;
+      line-height: 4.5rem;
+      color: #fff;
+      font-style: normal;
+      font-size: 2.5rem;
       text-align: center;
-      margin: 5px 0;
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 1px #333;
+      box-shadow: 1px 1px 5px 1px rgba(206, 206, 206, 0.5);
+    }
+  }
 
-      &:nth-child(1) {
-        font-weight: bold;
-      }
+  .bg-red {
+    background: linear-gradient(
+        50deg,
+        rgba(248, 94, 9, 0.5) 0%,
+        rgba(248, 94, 9, 1) 100%
+    );
+  }
 
-      &:nth-child(2) {
-        color: #fff;
+  .bg-yellow {
+    background: linear-gradient(
+        50deg,
+        rgba(251, 229, 0, 0.5) 0%,
+        rgba(251, 229, 0, 1) 100%
+    );
+  }
+
+  .bg-green {
+    background: linear-gradient(
+        50deg,
+        rgba(0, 255, 107, 0.5) 0%,
+        rgba(0, 255, 107, 1) 100%
+    );
+  }
+
+  .bg-blue {
+    background: linear-gradient(
+        50deg,
+        rgba(0, 57, 255, 0.5) 0%,
+        rgba(0, 57, 255, 1) 100%
+    );
+  }
+
+  .bg-orange {
+    background: linear-gradient(
+        50deg,
+        rgba(255, 150, 0, 0.5) 0%,
+        rgba(255, 150, 0, 1) 100%
+    );
+  }
+
+  .bg-lightred {
+    background: linear-gradient(
+        50deg,
+        rgba(255, 113, 143, 0.5) 0%,
+        rgba(255, 113, 143, 1) 100%
+    );
+  }
+
+  .day-list {
+    a {
+      color: #fff;
+
+      span {
+        display: block;
+        text-align: center;
+        margin: 5px 0;
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 1px #333;
+
+        &:nth-child(1) {
+          font-weight: bold;
+        }
+
+        &:nth-child(2) {
+          color: #fff;
+        }
       }
     }
   }
-}
 
-.week-chart-list {
-  & > div {
-    height: 100px;
-    margin: 10px;
-    border: 1px solid #fff;
-    background-color: rgba(255, 255, 255, 0.5);
+  .week-chart-list {
+    & > div {
+      height: 100px;
+      margin: 10px;
+      border: 1px solid #fff;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
   }
-}
+
+  a {
+    &[href="#/"] {
+      /*background-color: rgba(204, 204, 204, 0.5);*/
+      background-color: #fff;
+      color: #ccc;
+    }
+  }
+
 </style>
 <template>
   <div class="page">
@@ -152,86 +162,86 @@
   </div>
 </template>
 <script lang="ts">
-import { numberToMoney } from '../ts/comm';
+  import {numberToMoney} from '../ts/comm';
 
-export default {
-  name: 'Index',
-  data() {
-    return {
-      xAxisLabel: ['1', '2', '3', '4', '5', '6', '7'],
-      dayList: [
-        { 'name': '总收入', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '销售业务收入', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '售后业务收入', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '总毛利', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '销售业务毛利', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '售后业务毛利', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '总交车量', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '总库存量', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-        { 'name': '总销售潜客量', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7] },
-      ]
-    }
-  },
-  mounted(): void {
-    const _this = this;
-    _this.$nextTick(function () {
-      const charts: object[] = _this.$refs.div;
-      charts.map(function (dom, i) {
-        _this.setChart(dom, i);
-      });
-    });
-  },
-  methods: {
-    option(data): object {
-      const _this = this;
+  export default {
+    name: 'Index',
+    data() {
       return {
-        legend: {
-          data: [data.name],
-          bottom: 0,
-        },
-        color: ['#4472C4'],
-        grid: {
-          top: 10,
-          bottom: 50,
-        },
-        xAxis: {
-          type: 'category',
-          axisLine: {
-            show: false,
-          },
-          axisTick: {
-            show: false,
-          },
-          data: _this.xAxisLabel,
-        },
-        yAxis: {
-          type: 'value',
-          show: false,
-        },
-        series: [{
-          name: data.name,
-          data: data.week,
-          type: 'bar',
-        }]
-      };
+        xAxisLabel: ['1', '2', '3', '4', '5', '6', '7'],
+        dayList: [
+          {'name': '总收入', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '销售业务收入', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '售后业务收入', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '总毛利', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '销售业务毛利', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '售后业务毛利', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '总交车量', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '总库存量', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+          {'name': '总销售潜客量', 'code': '', 'day': '1234567', 'week': [1, 2, 3, 4, 5, 6, 7]},
+        ]
+      }
     },
-    setValue(value: number | string): string {
-      return numberToMoney(value);
-    },
-    setChart(dom: object, i: number): void {
+    mounted(): void {
       const _this = this;
-      const data = _this.dayList[i];
-      const chart = echarts.init(dom);
-      chart.setOption(_this.option(data));
+      _this.$nextTick(function () {
+        const charts: object[] = _this.$refs.div;
+        charts.map(function (dom, i) {
+          _this.setChart(dom, i);
+        });
+      });
     },
-    toP2(name) {
-      this.$router.push({
-        name: `p2`,
-        params: {
-          name: name
-        }
-      })
+    methods: {
+      option(data): object {
+        const _this = this;
+        return {
+          legend: {
+            data: [data.name],
+            bottom: 0,
+          },
+          color: ['#4472C4'],
+          grid: {
+            top: 10,
+            bottom: 50,
+          },
+          xAxis: {
+            type: 'category',
+            axisLine: {
+              show: false,
+            },
+            axisTick: {
+              show: false,
+            },
+            data: _this.xAxisLabel,
+          },
+          yAxis: {
+            type: 'value',
+            show: false,
+          },
+          series: [{
+            name: data.name,
+            data: data.week,
+            type: 'bar',
+          }]
+        };
+      },
+      setValue(value: number | string): string {
+        return numberToMoney(value);
+      },
+      setChart(dom: object, i: number): void {
+        const _this = this;
+        const data = _this.dayList[i];
+        const chart = echarts.init(dom);
+        chart.setOption(_this.option(data));
+      },
+      toP2(name) {
+        this.$router.push({
+          name: `p2`,
+          params: {
+            name: name
+          }
+        })
+      }
     }
   }
-}
 </script>

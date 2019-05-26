@@ -34,7 +34,7 @@ p2,p5,p8
     <div class="brand-list">
       <div class="brand-part" v-for="(item, index) in brand" :key="item.name">
         <div>
-          <img :src="buildUrl + '/imgs/' + item.url" alt>
+          <img :src="'imgs/' + item.url" alt>
           <span>{{item.txt}}</span>
         </div>
         <div>
@@ -83,13 +83,12 @@ p2,p5,p8
   </div>
 </template>
 <script lang="ts">
-import { numberToMoney, buildUrl } from '../ts/comm';
+import { numberToMoney } from '../ts/comm';
 
 export default {
   name: 'P3',
   data(): object {
     return {
-      buildUrl,
       mainTitle: '',
       pageTitles: [],
       brand: [],
@@ -106,7 +105,7 @@ export default {
     }
     $.ajax({
       type: 'get',
-      url: `${buildUrl}/data/${url}.json`
+      url: `data/${url}.json`
     }).done(function (data) {
       Vue.set(_this, 'mainTitle', data.mainTitle);
       Vue.set(_this, 'pageTitles', data.pageTitles);

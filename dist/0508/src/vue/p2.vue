@@ -52,7 +52,7 @@ interface SeriesObj {
   label: object
 }
 
-import { numberToMoney, buildUrl } from '../ts/comm';
+import { numberToMoney } from '../ts/comm';
 
 export default {
   name: 'P2',
@@ -76,7 +76,7 @@ export default {
     }
     $.ajax({
       type: 'get',
-      url: `${buildUrl}/data/${url}.json`
+      url: `data/${url}.json`
     }).done(function (data) {
       if (!!data.thead) {
         Vue.set(_this, 'thead', data.thead);

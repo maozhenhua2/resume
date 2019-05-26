@@ -14,4 +14,5 @@ export function numberToMoney(v: number | string): string {
 }
 
 // build时的ajax路径
-export const buildUrl = '/0508/dist';
+export const buildUrl = '';
+// export const buildUrl = '';

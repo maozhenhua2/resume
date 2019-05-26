@@ -98,7 +98,7 @@ interface SeriesObj {
   label: object
 }
 
-import { numberToMoney, buildUrl } from '../ts/comm';
+import { numberToMoney } from '../ts/comm';
 
 export default {
   name: 'P4',
@@ -124,7 +124,7 @@ export default {
     }
     $.ajax({
       type: 'get',
-      url: `${buildUrl}/data/${url}.json`
+      url: `data/${url}.json`
     }).done(function (data) {
       Vue.set(_this, 'mainTitle', data.mainTitle);
       Vue.set(_this, 'pageTitle', data.pageTitle);

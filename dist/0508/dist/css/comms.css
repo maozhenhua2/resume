@@ -278,6 +278,11 @@ body {
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.5);
 }
+a[href="#/"] {
+  /*background-color: rgba(204, 204, 204, 0.5);*/
+  background-color: #fff;
+  color: #ccc;
+}
 
 .map-title span {
   background-color: #fff;
@@ -326,4 +331,4 @@ body {
 }
 
 
-/*# sourceMappingURL=../sourcemaps/css/comms.css.map?hash=13c784e0b0f5b8704580*/
+/*# sourceMappingURL=../sourcemaps/css/comms.css.map?hash=9b830996dcbd68bd8de8*/

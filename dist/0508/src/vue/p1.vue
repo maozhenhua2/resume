@@ -22,7 +22,7 @@
     <div class="brand-list">
       <div class="brand-part" v-for="(item) in brand" :key="item.name">
         <div>
-          <img :src="buildUrl + '/imgs/' + item.url" alt>
+          <img :src="'imgs/' + item.url" alt>
           <span>{{item.txt}}</span>
         </div>
         <div>
@@ -53,7 +53,7 @@
       </h3>
     </div>
     <div class="map">
-      <img :src="buildUrl + '/imgs/map.png'" alt>
+      <img src="imgs/map.png" alt>
     </div>
     <!--<h1>page day1</h1>
     <ul>
@@ -63,13 +63,12 @@
   </div>
 </template>
 <script lang="ts">
-  import {numberToMoney, buildUrl} from '../ts/comm';
+  import {numberToMoney} from '../ts/comm';
 
   export default {
     name: 'P1',
     data(): object {
       return {
-        buildUrl,
         mainTitle: '',
         pageTitles: [],
         brand: [],
@@ -86,7 +85,7 @@
       }
       $.ajax({
         type: 'get',
-        url: `${buildUrl}/data/${url}.json`
+        url: `data/${url}.json`
       }).done(function (data) {
         Vue.set(_this, 'mainTitle', data.mainTitle);
         Vue.set(_this, 'pageTitles', data.pageTitles);

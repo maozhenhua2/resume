@@ -85,26 +85,6 @@ module.exports = {
           appendTsSuffixTo: [/.vue$/]
         } //认识vue文件
       },
-      // {
-      //   test: /\.(html)$/,
-      //   use: {
-      //     loader: 'html-loader',
-      //     options: {
-      //       attrs: [':data-src']
-      //     }
-      //   }
-      // },
-      // {
-      //   test: /\.(png|jpe?g|gif)$/,
-      //   use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {
-      //         publicPath: '/0508/dist/imgs/',
-      //       },
-      //     },
-      //   ],
-      // },
       // {test: /\.css$/, loader: 'vue-style-loader!css-loader'} //css加载器
     ]
   },
@@ -116,7 +96,7 @@ module.exports = {
     filename: `js/[name].js?hash=[hash]`,
     chunkFilename: `js/[name].js?hash=[chunkhash]`,
     sourceMapFilename: `sourcemaps/[file].map?hash=[hash]`,
-    publicPath: '/0508/dist/',
+    publicPath: '',
   },
   plugins: [
     new CleanWebpackPlugin({

@@ -297,6 +297,9 @@ body {
     padding: 0;
     border: 0;
   }
+  .page:nth-child(1) ~ * {
+    display: none;
+  }
 
   .products [class*=item] {
     background-color: transparent;
@@ -315,6 +318,20 @@ body {
     margin: 0;
     padding: 0;
   }
+}
+.sub-title {
+  margin: 14px 0 7px 0;
+}
+
+.skill {
+  padding: 10px;
+}
+.skill span {
+  display: inline-block;
+  padding: 10px;
+  background-color: #efefef;
+  margin: 0 10px 10px 0;
+  color: #666;
 }
 
 /*# sourceMappingURL=index.css.map */

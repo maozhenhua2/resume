@@ -311,6 +311,9 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    &:nth-child(1) ~ * {
+      display: none;
+    }
   }
   .products {
     [class*=item] {
@@ -333,5 +336,22 @@ body {
   @page {
     margin: 0;
     padding: 0;
+  }
+}
+
+
+
+.sub-title {
+  margin: 14px 0 7px 0;
+}
+
+.skill {
+  padding: 10px;
+  span {
+    display: inline-block;
+    padding: 10px;
+    background-color: #efefef;
+    margin: 0 10px 10px 0;
+    color: #666;
   }
 }

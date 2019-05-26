@@ -8,9 +8,9 @@ function header() {
   for (; i < l; i++) {
     var h = '<div class="left-tri"></div>' +
       '<div class="header-content">' +
-      '<img class="logo" src="images/honda.png" alt="" />' +
-      '<p>广汽本田特约店季度风险评估报告</p>' +
-      '<img class="logo-txt" src="images/text.png" alt="" />' +
+      '<img class="logo" src="" alt="" />' +
+      '<p>汽车特约店季度风险评估报告</p>' +
+      '<img class="logo-txt" src="" alt="" />' +
       '</div>' +
       '<div class="right-tri"></div>';
     head[i].innerHTML = h;
