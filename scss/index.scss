@@ -249,24 +249,18 @@ body {
   }
 }
 
-#skill {
-  width: 100%;
-  padding: 0 20px;
-  text {
-    fill: #fff;
-    dominant-baseline: middle;
-    text-anchor: left;
-  }
-  .value {
-    fill: #fff;
-    dominant-baseline: middle;
-    text-anchor: middle;
-  }
-  .bar {
-    fill: #999;
-  }
-  .bar-bg {
-    fill: #666;
+.sub-title {
+  margin: 14px 0 7px 0;
+}
+
+.skill {
+  padding: 10px;
+  span {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(95, 95, 95, 0.5);
+    margin: 0 10px 10px 0;
+    color: #ccc;
   }
 }
 
@@ -328,30 +322,14 @@ body {
       }
     }
   }
-  #skill {
-    text {
-      fill: #333;
+  .skill {
+    span {
+      background-color: #fff;
+      color: #333;
     }
   }
   @page {
     margin: 0;
     padding: 0;
-  }
-}
-
-
-
-.sub-title {
-  margin: 14px 0 7px 0;
-}
-
-.skill {
-  padding: 10px;
-  span {
-    display: inline-block;
-    padding: 10px;
-    background-color: #efefef;
-    margin: 0 10px 10px 0;
-    color: #666;
   }
 }

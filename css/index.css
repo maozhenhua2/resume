@@ -226,25 +226,19 @@ body {
   max-height: 100%;
 }
 
-#skill {
-  width: 100%;
-  padding: 0 20px;
+.sub-title {
+  margin: 14px 0 7px 0;
 }
-#skill text {
-  fill: #fff;
-  dominant-baseline: middle;
-  text-anchor: left;
+
+.skill {
+  padding: 10px;
 }
-#skill .value {
-  fill: #fff;
-  dominant-baseline: middle;
-  text-anchor: middle;
-}
-#skill .bar {
-  fill: #999;
-}
-#skill .bar-bg {
-  fill: #666;
+.skill span {
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(95, 95, 95, 0.5);
+  margin: 0 10px 10px 0;
+  color: #ccc;
 }
 
 @media print {
@@ -310,28 +304,15 @@ body {
     opacity: 1;
   }
 
-  #skill text {
-    fill: #333;
+  .skill span {
+    background-color: #fff;
+    color: #333;
   }
 
   @page {
     margin: 0;
     padding: 0;
   }
-}
-.sub-title {
-  margin: 14px 0 7px 0;
-}
-
-.skill {
-  padding: 10px;
-}
-.skill span {
-  display: inline-block;
-  padding: 10px;
-  background-color: #efefef;
-  margin: 0 10px 10px 0;
-  color: #666;
 }
 
 /*# sourceMappingURL=index.css.map */
