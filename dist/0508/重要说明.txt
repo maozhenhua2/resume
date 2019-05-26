@@ -1,0 +1,38 @@
+用的vue + vue-router + webpack4 + typescript + scss
+
+源文件在src目录里面
+dist里面是打包生成的文件
+
+vue-router控制地址跳转
+路径在ts/router.ts里面
+
+data文件夹里面是所有页面（除了第1页）的数据和格式
+
+allCode.ts里面是所有的指标名称
+{name: '总收入', code: '', fix: 0, unit: ''},
+code填code
+fix填小数保留
+unit填单位
+
+index.vue
+ppt页数：
+1
+
+p1.vue
+ppt页数：
+2,5,8,9,12
+
+p2.vue
+ppt页数：
+3,4,6,7,10,11,13,14,15,17
+
+p3.vue
+ppt页数：
+16
+
+p4.vue
+ppt页数：
+18
+
+只要确定 数据格式，kpicode，api地址后
+我就可以来进行数据绑定了

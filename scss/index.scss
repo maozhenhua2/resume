@@ -132,7 +132,7 @@ body {
         padding-left: 20px;
       }
     }
-    &::nth-last-child(1) {
+    &:nth-last-child(1) {
       div {
         padding-right: 20px;
       }
@@ -177,19 +177,19 @@ body {
 }
 
 .products {
+  background-color: #efefef;
   [class*="item"] {
     height: 480.666667px;
     text-align: center;
     padding: 20px;
-    background-color: #efefef;
   }
   a {
     display: block;
     height: 100%;
     position: relative;
     overflow: hidden;
-    &:before {
-      content: attr(title);
+
+    .text  {
       text-align: center;
       color: #fff;
       background-color: rgba(0, 0, 0, 0.5);
@@ -209,36 +209,36 @@ body {
       align-items: center;
     }
     &.top {
-      &:before {
+      .text {
         transform: translate(0, -100%);
         opacity: 1;
       }
     }
     &.bottom {
-      &:before {
+      .text {
         transform: translate(0, 100%);
         opacity: 1;
       }
     }
     &.left {
-      &:before {
+      .text {
         transform: translate(-100%, 0);
         opacity: 1;
       }
     }
     &.right {
-      &:before {
+      .text {
         transform: translate(100%, 0);
         opacity: 1;
       }
     }
     &.transform {
-      &:before {
+      .text {
         transition: all 0.3s linear;
       }
     }
     &.show {
-      &:before {
+      .text {
         transform: translate(0, 0);
       }
     }

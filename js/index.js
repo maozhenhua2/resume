@@ -100,7 +100,7 @@
     .attr('width', width - textWidth - 10)
     .attr('height', function(d, i) {
       return rectHeight - rectPadding;
-    })
+    });
   // .attr('fill', '#ccc');
 
   // 柱子
@@ -115,7 +115,7 @@
     })
     .attr('height', function(d, i) {
       return rectHeight - rectPadding;
-    })
+    });
   // .attr('fill', colors[0]);
 
   // 柱宽文字
@@ -152,7 +152,7 @@
         $(_this).addClass('show transform');
       }, 0);
     })
-    .on('mouseleave', function() {
+    .on('mouseleave', function(event) {
       var _this = this;
       $(_this).removeClass(dir[index]);
       index = getDir($(_this), {
