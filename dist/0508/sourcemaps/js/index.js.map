@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///external \"Vue\""],"names":["module","exports","Vue"],"mappings":"yEAAAA,EAAAC,QAAAC","file":"js/index.js?hash=c2cb73aab301cd8f098d","sourcesContent":["module.exports = Vue;"],"sourceRoot":""}
