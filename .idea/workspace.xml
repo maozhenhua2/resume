@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb7eff30-0a83-4cd3-a5bf-9673cd1e4125" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/js/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/js/manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/index.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/manifest.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/manifest.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p4.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/index.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+            <state relative-caret-position="453">
+              <caret line="254" column="46" selection-start-line="254" selection-start-column="46" selection-end-line="254" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -39,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/training/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2484">
-              <caret line="138" column="19" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="19" />
+            <state relative-caret-position="1206">
+              <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -74,12 +63,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/dist/training/player.html" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p1.vue" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p2.vue" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p3.vue" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p4.vue" />
         <option value="$PROJECT_DIR$/scss/index.scss" />
+        <option value="$PROJECT_DIR$/dist/training/player.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -108,6 +97,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,13 +119,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo_test/js/work3/tmp/0508" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo_test/js/work4/webpack4" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -171,16 +161,20 @@
       <updated>1558846642348</updated>
       <workItem from="1558846644729" duration="6496000" />
       <workItem from="1558854654937" duration="4000" />
+      <workItem from="1558861357806" duration="545000" />
+      <workItem from="1558863989887" duration="991000" />
+      <workItem from="1558865272839" duration="41000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6500000" />
+    <option name="totallyTimeSpent" value="8077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="264" y="103" width="1833" height="1215" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25013927" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -262,23 +256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/training/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="138" column="19" selection-start-line="138" selection-start-column="18" selection-end-line="138" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/0508/src/vue/p1.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1566">
@@ -304,6 +281,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2268">
           <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="254" column="46" selection-start-line="254" selection-start-column="46" selection-end-line="254" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/training/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="67" column="32" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
