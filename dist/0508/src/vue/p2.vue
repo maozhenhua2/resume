@@ -76,7 +76,7 @@ export default {
     }
     $.ajax({
       type: 'get',
-      url: `/data/${url}.json`
+      url: `../data/${url}.json`
     }).done(function (data) {
       if (!!data.thead) {
         Vue.set(_this, 'thead', data.thead);

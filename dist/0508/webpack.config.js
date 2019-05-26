@@ -25,7 +25,7 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: path.resolve(__dirname, 'src'),
-    host: '192.168.1.91',
+    host: '192.168.78.1',
     compress: true,
     port: 9000,
     publicPath: '/',

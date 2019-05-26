@@ -177,11 +177,11 @@ body {
 }
 
 .products {
+  background-color: #efefef;
   [class*="item"] {
     height: 480.666667px;
     text-align: center;
     padding: 20px;
-    background-color: #efefef;
   }
   a {
     display: block;

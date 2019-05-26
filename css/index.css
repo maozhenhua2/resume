@@ -166,11 +166,13 @@ body {
   line-height: 1.5;
 }
 
+.products {
+  background-color: #efefef;
+}
 .products [class*=item] {
   height: 480.666667px;
   text-align: center;
   padding: 20px;
-  background-color: #efefef;
 }
 .products a {
   display: block;

@@ -124,7 +124,7 @@ export default {
     }
     $.ajax({
       type: 'get',
-      url: `/data/${url}.json`
+      url: `../data/${url}.json`
     }).done(function (data) {
       Vue.set(_this, 'mainTitle', data.mainTitle);
       Vue.set(_this, 'pageTitle', data.pageTitle);
