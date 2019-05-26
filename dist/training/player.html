@@ -50,10 +50,23 @@
   var end = $('#processBar').width() - $('#processBar a').outerWidth(true);
   var down = false;
 
+  // setInterval(function () {
+  //   var bufferPercent = audio.buffered / audio.duration;
+  //   console.log(bufferPercent)
+  // }, 100);
+
   audio.oncanplay = function () {
     et = audio.duration;
     var allTime = getAllTime(audio.duration);
     $('#total').html(allTime.minute + ':' + allTime.second);
+
+
+    setInterval(function () {
+      var timeRanges = audio.buffered;
+      var timeBuffered = timeRanges.end(timeRanges.length - 1);
+      var bufferPercent = timeBuffered / audio.duration;
+      console.log(bufferPercent)
+    }, 100)
   };
 
   function getAllTime(time) {
@@ -65,6 +78,7 @@
       allSecond: time,
     }
   }
+
   // 进度按钮触摸事件
   $('#processBar a')
     .on('touchstart', function () {
