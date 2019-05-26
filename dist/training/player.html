@@ -14,7 +14,9 @@
 <body>
 <div id="wrapper">
   <div id="playCover">
-    <div><div class="img" style="background-image: url('./images/pic3.jpg')"></div></div>
+    <div>
+      <div class="img" style="background-image: url('./images/pic3.jpg')"></div>
+    </div>
   </div>
   <div id="playTitle">带您学习GS5对比GL8的优势 拷贝</div>
   <div id="processBox">
@@ -33,130 +35,150 @@
     <a id="play"></a>
     <a id="next"></a>
   </div>
+  <audio src="./data/SLEEP%20DOG%20FILE007328.ogg"></audio>
 </div>
 
 <script src="vendor/jquery-3.2.1.min.js"></script>
 <script>
-  (function () {
-    var times;
-    var start = $('#processBar').offset().left;
-    var end = $('#processBar').width() - $('#processBar a').outerWidth(true);
+  // (function () {
+  var audio = $('audio')[0];
+  audio.load();
+  var st = 0;
+  var et = 0;
+  var times;
+  var start = $('#processBar').offset().left;
+  var end = $('#processBar').width() - $('#processBar a').outerWidth(true);
+  var down = false;
 
-    var st = 0;
-    var et = 3 * 60 + 5;
+  audio.oncanplay = function () {
+    et = audio.duration;
+    var allTime = getAllTime(audio.duration);
+    $('#total').html(allTime.minute + ':' + allTime.second);
+  };
 
-    var down = false;
-    // 进度按钮触摸事件
-    $('#processBar a')
-      .on('touchstart', function () {
-        down = true;
-        $('#processBar a').addClass('active');
-      })
-      .on('touchmove', function (e) {
-        if (down) {
-          checkprocess(e)
-        }
-      })
-      .on('touchend', function () {
-        down = false;
-        $('#processBar a').removeClass('active');
-      });
-
-    // 进度条点击事件
-    $('#processBar > div')
-      .on('touchstart', function (e) {
-        down = true;
-        checkprocess(e);
-      })
-      .on('touchend', function () {
-        down = false;
-      });
-
-    $('#play').on('click', function () {
-      $(this).toggleClass('active');
-      if ($(this).hasClass('active')) {
-        run();
-      } else {
-        stop();
+  function getAllTime(time) {
+    var minute = parseFloat(time / 60).toFixed(0);
+    var second = parseFloat(time % 60).toFixed(0);
+    return {
+      minute: minute,
+      second: second,
+      allSecond: time,
+    }
+  }
+  // 进度按钮触摸事件
+  $('#processBar a')
+    .on('touchstart', function () {
+      down = true;
+      $('#processBar a').addClass('active');
+    })
+    .on('touchmove', function (e) {
+      if (down) {
+        checkprocess(e)
       }
+    })
+    .on('touchend', function () {
+      down = false;
+      $('#processBar a').removeClass('active');
     });
 
-    function run() {
-      times = setInterval(timer, 1000);
-      $('#playCover, #playCover > div').addClass('play');
+  // 进度条点击事件
+  $('#processBar > div')
+    .on('touchstart', function (e) {
+      down = true;
+      checkprocess(e);
+    })
+    .on('touchend', function () {
+      down = false;
+    });
+
+  $('#play').on('click', function () {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      run();
+    } else {
+      stop();
+    }
+  });
+
+  function run() {
+    times = setInterval(timer, 1000);
+    $('#playCover, #playCover > div').addClass('play');
+    audio.play();
+  }
+
+  function stop() {
+    clearInterval(times);
+    $('#playCover, #playCover > div').removeClass('play');
+    $('#play').removeClass('active');
+    audio.pause();
+  }
+
+  function checkprocess(e) {
+    var s = e.touches[0].pageX - start;
+    s = s >= end ? end : s;
+    s = s <= 0 ? 0 : s;
+    var p = s / end * 100;
+
+    // 时间
+    var time = et * p / 100;
+    var second = parseInt(time % 60, 10);
+    var mimute = Math.floor(time / 60);
+    st = mimute * 60 + second;
+    second = second < 10 ? '0' + second : second;
+    mimute = mimute < 10 ? '0' + mimute : mimute;
+
+    audio.currentTime = st;
+
+    htmlchange({
+      a: s,
+      p: p,
+      t: mimute + ':' + second
+    });
+
+    if (p === 100) {
+      console.log(p)
+      // if ($('#play').hasClass('active')) {
+      //   stop();
+      //   run();
+      // }
     }
 
-    function stop() {
-      clearInterval(times);
-      $('#playCover, #playCover > div').removeClass('play');
-      $('#play').removeClass('active');
+  }
+
+  // 定时器
+  // run();
+  function timer() {
+    // console.log('run');
+    st = st + 1;
+    var p = st / et;
+    if (st >= et) {
+      stop();
+      st = et;
+      p = 1;
     }
+    var second = parseInt(st % 60, 10);
+    var minute = Math.floor(st / 60);
+    second = second < 10 ? '0' + second : second;
+    minute = minute < 10 ? '0' + minute : minute;
+    htmlchange({
+      a: p * end,
+      p: p * 100,
+      t: minute + ':' + second
+    });
+  }
 
-    function checkprocess(e) {
-      var s = e.touches[0].pageX - start;
-      s = s >= end ? end : s;
-      s = s <= 0 ? 0 : s;
-      var p = s / end * 100;
+  // dom元素样式文字变化
+  function htmlchange(obj) {
+    $('#processBar a').css({
+      transform: 'translateX(' + obj.a + 'px)'
+    });
+    $('#processBar .process').css({
+      width: obj.p + '%'
+    });
+    $('#current').html(obj.t);
+  }
 
-      // 时间
-      var time = et * p / 100;
-      var second = parseInt(time % 60, 10);
-      var mimute = Math.floor(time / 60);
-      st = mimute * 60 + second;
-      second = second < 10 ? '0' + second : second;
-      mimute = mimute < 10 ? '0' + mimute : mimute;
-
-
-      htmlchange({
-        a: s,
-        p: p,
-        t: mimute + ':' + second
-      });
-
-      if (p !== 1) {
-
-        if ($('#play').hasClass('active')) {
-          stop();
-          run();
-        }
-      } else {
-
-      }
-    }
-
-    // 定时器
-    // run();
-    function timer() {
-      // console.log('run');
-      st = st + 1;
-      var p = st / et;
-      if (st >= et) {
-        stop();
-        st = et;
-        p = 1;
-      }
-      var second = parseInt(st % 60, 10);
-      var mimute = Math.floor(st / 60);
-      second = second < 10 ? '0' + second : second;
-      mimute = mimute < 10 ? '0' + mimute : mimute;
-      htmlchange({
-        a: p * end,
-        p: p * 100,
-        t: mimute + ':' + second
-      });
-    }
-
-    // dom元素样式文字变化
-    function htmlchange(obj) {
-      $('#processBar a').css({
-        transform: 'translateX(' + obj.a + 'px)'
-      });
-      $('#processBar .process').css({
-        width: obj.p + '%'
-      });
-      $('#current').html(obj.t);
-    }
-  }());
+  // }());
 </script>
 </body>
 </html>
