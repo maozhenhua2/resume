@@ -95,5 +95,10 @@ body {
     width: 100%;
   }
 }
+@media print {
+  .img-box {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=resume.css.map */
