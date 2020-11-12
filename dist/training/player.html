@@ -61,18 +61,20 @@
     $('#total').html(allTime.minute + ':' + allTime.second);
 
 
-    setInterval(function () {
-      var timeRanges = audio.buffered;
-      var timeBuffered = timeRanges.end(timeRanges.length - 1);
-      var bufferPercent = timeBuffered / audio.duration;
-      console.log(bufferPercent)
-    }, 100)
+    // setInterval(function () {
+    //   var timeRanges = audio.buffered;
+    //   var timeBuffered = timeRanges.end(timeRanges.length - 1);
+    //   var bufferPercent = timeBuffered / audio.duration;
+    //   console.log(bufferPercent)
+    // }, 100)
   };
 
   function getAllTime(time) {
+    var hour = parseFloat(time / 60 / 60).toFixed(0);
     var minute = parseFloat(time / 60).toFixed(0);
     var second = parseFloat(time % 60).toFixed(0);
     return {
+      hour: hour,
       minute: minute,
       second: second,
       allSecond: time,
@@ -81,27 +83,27 @@
 
   // 进度按钮触摸事件
   $('#processBar a')
-    .on('touchstart', function () {
+    .on('mousedown', function () {
       down = true;
       $('#processBar a').addClass('active');
     })
-    .on('touchmove', function (e) {
+    .on('mousemove', function (e) {
       if (down) {
         checkprocess(e)
       }
     })
-    .on('touchend', function () {
+    .on('mouseup', function () {
       down = false;
       $('#processBar a').removeClass('active');
     });
 
   // 进度条点击事件
   $('#processBar > div')
-    .on('touchstart', function (e) {
+    .on('mousedown', function (e) {
       down = true;
       checkprocess(e);
     })
-    .on('touchend', function () {
+    .on('mouseup', function () {
       down = false;
     });
 
@@ -128,7 +130,7 @@
   }
 
   function checkprocess(e) {
-    var s = e.touches[0].pageX - start;
+    var s = e.pageX - start;
     s = s >= end ? end : s;
     s = s <= 0 ? 0 : s;
     var p = s / end * 100;

@@ -3,66 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb7eff30-0a83-4cd3-a5bf-9673cd1e4125" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/css/comms.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/css/comms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/js/comms.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/js/comms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/js/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/js/manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/css/comms.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/css/comms.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/comms.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/comms.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/manifest.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/dist/sourcemaps/js/manifest.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p10.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p10.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p11.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p11.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p12.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p12.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p13.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p13.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p14.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p14.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p15.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p15.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p16.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p16.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p17.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p17.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p18.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p18.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p2.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p3.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p3.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p4.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p5.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p5.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p6.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p6.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p7.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p7.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p8.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p8.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/data/p9.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/data/p9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/imgs/p6.png" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/imgs/p6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/ts/allCode.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/ts/allCode.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/ts/comm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/ts/comm.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/ts/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/ts/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/ts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/ts/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/ts/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/ts/router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vendor/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vendor/jquery-3.3.1.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vendor/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vendor/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vendor/vue-router.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vendor/vue-router.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vendor/vue.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vendor/vue.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/app.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/app.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p1.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p4.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p4.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/src/vue/p404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/src/vue/p404.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/0508/重要说明.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dist/0508/重要说明.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ChinaMap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ChinaMap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ChinaMap/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ChinaMap/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/经销商风险报告/data/GetDealerRiskInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/经销商风险报告/data/GetDealerRiskInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/经销商风险报告/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/经销商风险报告/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/经销商风险报告/js/DealerRiskReport.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/经销商风险报告/js/DealerRiskReport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/maxmao2.byethost22.com_cjatech_ChinaMap_index.html.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/maxmao2.byethost22.com_cjatech_ChinaMap_index.html.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/maxmao2.byethost22.com_cjatech_经销商风险报告_index.html.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imgs/maxmao2.byethost22.com_cjatech_经销商风险报告_index.html.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/index.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,20 +15,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+            <state relative-caret-position="18">
+              <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="296" column="3" lean-forward="true" selection-start-line="296" selection-start-column="3" selection-end-line="296" selection-end-column="3" />
+            <state relative-caret-position="4500">
+              <caret line="250" selection-start-line="250" selection-end-line="250" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -118,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p1.vue" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p2.vue" />
         <option value="$PROJECT_DIR$/dist/0508/src/vue/p3.vue" />
@@ -129,8 +77,9 @@
         <option value="$PROJECT_DIR$/dist/经销商风险报告/data/GetDealerRiskInfo.js" />
         <option value="$PROJECT_DIR$/dist/ChinaMap/index.html" />
         <option value="$PROJECT_DIR$/dist/ChinaMap/scss/index.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scss/index.scss" />
+        <option value="$PROJECT_DIR$/js/index.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -158,7 +107,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,22 +119,18 @@
               <item name="resume" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="resume" type="b2602c69:ProjectViewProjectNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="scss" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo_test/js/work4/webpack4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo_test/js/work4/angular" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -225,18 +169,18 @@
       <workItem from="1558861357806" duration="545000" />
       <workItem from="1558863989887" duration="991000" />
       <workItem from="1558865272839" duration="709000" />
-      <workItem from="1558867949676" duration="2323000" />
+      <workItem from="1558867949676" duration="3317000" />
+      <workItem from="1559215998275" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11068000" />
+    <option name="totallyTimeSpent" value="12101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="264" y="103" width="1833" height="1215" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24958217" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24958217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -249,7 +193,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21759698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21759698" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -358,13 +302,6 @@
     <entry file="file://$PROJECT_DIR$/dist/经销商风险报告/data/GetDealerRiskReportTotalPoint.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="132" column="28" lean-forward="true" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/经销商风险报告/style/DealerRiskReport.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -414,15 +351,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+        <state relative-caret-position="18">
+          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/index.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="296" column="3" lean-forward="true" selection-start-line="296" selection-start-column="3" selection-end-line="296" selection-end-column="3" />
+        <state relative-caret-position="4500">
+          <caret line="250" selection-start-line="250" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
         </state>
       </provider>
     </entry>
