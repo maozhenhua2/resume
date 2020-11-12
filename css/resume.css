@@ -62,7 +62,7 @@ body {
   padding: 10px;
   background: radial-gradient(white, rgba(255, 255, 255, 0.5));
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   font-size: 2rem;
   border: 1px solid #ccc;
 }

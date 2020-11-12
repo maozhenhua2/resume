@@ -158,16 +158,16 @@
     var model = document.querySelector('#model');
 
     [].slice.call(document.querySelectorAll('.img')).map(function(img) {
-      // console.dir(img.width)
       var parent = img.parentNode;
       var span = document.createElement('span');
       span.innerHTML = '点击放大';
       span.className = 'span';
-      img.onload = function() {
-        span.style.top = img.offsetTop + img.height / 2 + 'px';
-        span.style.left = img.offsetLeft + img.width / 2 + 'px';
+      imgReady(img.src, function() {
+        var height = this.height * 374 / this.width;
+        span.style.top = img.offsetTop + height / 2 + 'px';
+        span.style.left = img.offsetLeft + 374 / 2 + 'px';
         parent.insertBefore(span, img);
-      };
+      })
     })
 
 
