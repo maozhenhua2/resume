@@ -85,6 +85,9 @@ body {
 #model.show {
   display: block;
 }
+#model img {
+  display: block;
+}
 
 @media screen and (max-width: 600px) {
   html {
