@@ -17,6 +17,10 @@ body {
   word-break: break-word;
 }
 
+p {
+  margin: 0.5rem 0;
+}
+
 .wrapper {
   width: 768px;
   margin: 0 auto 50px;
