@@ -53,7 +53,7 @@ body {
   position: relative;
 }
 .img:only-of-type {
-  width: 100%;
+  width: calc(100% - 2px);
 }
 
 .span {

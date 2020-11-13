@@ -157,15 +157,17 @@
 
     var model = document.querySelector('#model');
 
-    [].slice.call(document.querySelectorAll('.img')).map(function(img) {
+    [].slice.call(document.querySelectorAll('.img')).map(function(img, i) {
       var parent = img.parentNode;
       var span = document.createElement('span');
       span.innerHTML = '点击放大';
       span.className = 'span';
       imgReady(img.src, function() {
-        var height = this.height * 374 / this.width;
+        var width = parent.children.length === 1 ? 768 : 374
+        var height = this.height * width / this.width;
+
         span.style.top = img.offsetTop + height / 2 + 'px';
-        span.style.left = img.offsetLeft + 374 / 2 + 'px';
+        span.style.left = img.offsetLeft + width / 2 + 'px';
         parent.insertBefore(span, img);
       })
     })
