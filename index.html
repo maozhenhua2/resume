@@ -160,7 +160,7 @@
     [].slice.call(document.querySelectorAll('.img')).map(function(img, i) {
       var parent = img.parentNode;
       var span = document.createElement('span');
-      span.innerHTML = '点击放大';
+      span.innerHTML = '图片点击放大';
       span.className = 'span';
       imgReady(img.src, function() {
         var width = parent.children.length === 1 ? 768 : 374
