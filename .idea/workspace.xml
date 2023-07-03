@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb7eff30-0a83-4cd3-a5bf-9673cd1e4125" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/resume.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/resume.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/resume.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/resume.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/resume.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/resume.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +104,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/work/resume",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.customizations",
+    "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -141,7 +140,11 @@
       <workItem from="1674199890385" duration="57000" />
       <workItem from="1674199958682" duration="69000" />
       <workItem from="1674200040056" duration="169000" />
-      <workItem from="1674794157707" duration="5001000" />
+      <workItem from="1674794157707" duration="5670000" />
+      <workItem from="1681919891234" duration="52000" />
+      <workItem from="1681920135155" duration="223000" />
+      <workItem from="1681920442730" duration="119000" />
+      <workItem from="1681920574481" duration="111000" />
     </task>
     <servers />
   </component>
